@@ -95,3 +95,52 @@ You attempted to push changes from your `development` branch to the `features/wa
    git fetch origin
    git checkout features/walkthrough
    git merge origin/features/walkthrough
+
+# Git Operations and Strategies
+
+## Resolving Conflicts
+
+1. **Manually resolve conflicts** in your files.
+
+2. **Stage the resolved files**:
+    ```bash
+    git add <file>
+    ```
+
+3. **Commit the resolved changes**:
+    ```bash
+    git commit -m "Resolved merge conflicts"
+    ```
+
+## Pushing the Merged Branch
+
+1. **Checkout to the development branch**:
+    ```bash
+    git checkout development
+    ```
+
+2. **Push the merged branch**:
+    ```bash
+    git push origin development:features/walkthrough
+    ```
+
+## Prevention Strategies
+
+1. **Regularly Pull and Merge**:
+    Frequently pull changes from remote branches to keep your local branches up-to-date and avoid conflicts.
+    ```bash
+    git pull origin development
+    ```
+
+2. **Check Remote Branch Status**:
+    Before pushing, verify if your branch is behind the remote branch.
+    ```bash
+    git fetch origin
+    git status
+    ```
+
+3. **Use Pull Requests**:
+    Use pull requests (PRs) on platforms like GitHub or GitLab to review and integrate changes. This helps prevent issues by ensuring code reviews and integration checks.
+
+4. **Avoid Force Pushes**:
+    Avoid using `git push --force` unless absolutely necessary, as it can overwrite important changes on the remote branch.
