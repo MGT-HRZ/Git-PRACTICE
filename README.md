@@ -93,8 +93,8 @@ You attempted to push changes from your `development` branch to the `features/wa
 1. **Fetch and Review Remote Branch:**
    ```bash
    git fetch origin
-   git checkout features/walkthrough
-   git merge origin/features/walkthrough
+   git checkout <branch name>
+   git merge origin/<branch name>
 
 # Git Operations and Strategies
 
@@ -116,12 +116,12 @@ You attempted to push changes from your `development` branch to the `features/wa
 
 1. **Checkout to the development branch**:
     ```bash
-    git checkout development
+    git checkout <branch name>
     ```
 
 2. **Push the merged branch**:
     ```bash
-    git push origin development:features/walkthrough
+    git push origin <from this branch name>:<to this branch name>
     ```
 
 ## Prevention Strategies
@@ -129,7 +129,7 @@ You attempted to push changes from your `development` branch to the `features/wa
 1. **Regularly Pull and Merge**:
     Frequently pull changes from remote branches to keep your local branches up-to-date and avoid conflicts.
     ```bash
-    git pull origin development
+    git pull origin <branch name>
     ```
 
 2. **Check Remote Branch Status**:
